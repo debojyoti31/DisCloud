@@ -6,7 +6,7 @@ from discord.ext import commands
 from cryptography.fernet import Fernet
 
 # Set 'BOT_TOKEN' with your actual bot token
-BOT_TOKEN = 'MTE3ODM2MjUxOTcyMzcyNDgwMA.GIyOmW.QoR3jW2bijs3IJ0ppASQQh5JYoF30oEc_t_PwI'
+BOT_TOKEN = 'MTE3ODM2kjhgfewrtyrutyilu;oilkjh0oEchtyjklj'
 
 path_separator = os.path.sep
 
