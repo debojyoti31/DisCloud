@@ -40,7 +40,6 @@ async def on_command_error(ctx, error):
         command_list = "\n".join([f"**{command.name}**: {command.help}" for command in bot.commands])
         await ctx.send(f"Command not found. Available commands:\n{command_list}")
     else:
-        # Handle other errors, or let Discord.py handle them
         raise error
 
 @bot.command(name='split', help='Split a file and upload its parts to Discord.')
