@@ -271,7 +271,7 @@ async def get_file_details(ctx, file_name):
         return None
 
     formatted_size = format_size(total_size)
-    last_uploaded_timestamp_local = last_uploaded_timestamp.astimezone(pytz.timezone(your_timezone))  # Replace 'Your/Timezone' with your actual time zone
+    last_uploaded_timestamp_local = last_uploaded_timestamp.astimezone(pytz.timezone(your_timezone))
 
     return f"**Total Parts:** {total_parts}\n**Total Size:** {formatted_size}\n**Last Uploaded at:** {last_uploaded_timestamp_local.strftime('%Y-%m-%d %H:%M:%S %Z')}"
 
