@@ -9,8 +9,9 @@ def generate_fernet_key(key_name):
     with open(key_name, 'wb') as key_file:
         key_file.write(key)
 
-    print("Fernet key generated and saved to 'enckey.key'.")
+    print(f"Fernet key generated and saved as {key_name}.")
 
 if __name__ == "__main__":
     generate_fernet_key('enckey.key')
+    
 
