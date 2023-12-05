@@ -154,6 +154,12 @@ file. Suppose the file you want to download is `fileName.ext`, and the
 path where you want to download it is `my/custom/path`. So, the
 `output_file_path` will be: `my/custom/path/filename.ext`
 
+⚠️ **Attention: Temporary Folder During Download**
+
+When downloading files, a temporary folder will be created to facilitate the decryption and combining process. It is crucial not to delete this temporary folder during the download process. Rest assured, the folder will be automatically removed once the decryption and combining procedures are successfully completed.
+
+Deleting the temporary folder prematurely may result in incomplete or corrupted files. Please allow the download process to finish, and the temporary folder will be taken care of automatically.
+
 ## Deleting File Parts
 
 To delete all uploaded file parts from the Discord channel, use the
@@ -184,4 +190,4 @@ Replace `<file_name>` with the name of the file you want details for.
 
 
 
-####  ⚠️ Before using this Discord bot, it is important to familiarize yourself with Discord's privacy policy. This application interacts with Discord servers and processes file-related operations. Ensure that you comply with Discord's terms of service and privacy policy to protect user data and adhere to the platform's guidelines.
+⚠️ **Before using this Discord bot, it is important to familiarize yourself with Discord's privacy policy. This application interacts with Discord servers and processes file-related operations. Ensure that you comply with Discord's terms of service and privacy policy to protect user data and adhere to the platform's guidelines.**
