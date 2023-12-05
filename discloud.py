@@ -3,6 +3,7 @@ import shutil
 import discord
 import random
 from discord.ext import commands
+import asyncio
 from cryptography.fernet import Fernet
 import math
 import io
@@ -119,7 +120,6 @@ async def combine(ctx, *, combined_file_path: str):
         # Clean up: Delete the temporary folder
         shutil.rmtree(parts_folder, ignore_errors=True)
 
-
 @bot.command(name='delete', help='Delete parts of uploaded file.')
 async def delete(ctx, *, file_name: str):
     """
@@ -131,10 +131,32 @@ async def delete(ctx, *, file_name: str):
         await ctx.send(f"File parts for '{file_name}' not found.")
         return
 
-    # Delete file parts from the channel
-    await delete_file_parts(ctx, file_name)
+    # Confirmation prompt
+    await ctx.send(f"Are you sure you want to delete all file parts for '**{file_name}**'? Type **`yes`** to confirm.")
 
-    await ctx.send(f"All file parts for '{file_name}' have been deleted.")
+    def check(message):
+        return message.author == ctx.author and message.channel == ctx.channel and message.content.lower() not in []
+
+    try:
+        # Wait for user confirmation
+        user_response = await bot.wait_for('message', check=check, timeout=10.0)
+        
+        if user_response.content.lower() == 'yes':
+            await ctx.send(f"Deletion confirmed. Deleting file parts for '**{file_name}**'...")
+        
+        elif user_response.content.lower() != 'yes':
+           await ctx.send("Deletion canceled.")
+           return
+        
+        # Delete file parts from the channel
+        await delete_file_parts(ctx, file_name)
+        await ctx.send(f"All file parts for '**{file_name}**' have been deleted.")
+    
+    except (asyncio.CancelledError, asyncio.TimeoutError):
+        await ctx.send("Deletion canceled.")
+    
+    except Exception as e:
+        await ctx.send(f"An error occurred: {e}")
 
 
 @bot.command(name='listfiles', help='Get all the uploaded files.')
