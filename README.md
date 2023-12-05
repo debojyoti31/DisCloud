@@ -118,10 +118,14 @@ Before using the bot, ensure that you have the following prerequisites:
 4.  Run `genkey.py` to generate the encryption key `enckey.key` if you
     need a new key.
 
-5.  Never ever lose the encryption key. If you do, you won’t be able to
-    use the files ever again. The key you used to encrypt the part files
-    when uploading is needed to decrypt the downloaded part to its
-    original form.
+5.  ⚠️ **Warning: Encryption Key Protection**
+
+Never, under any circumstances, misplace or lose the encryption key associated with your files. The encryption key used during the upload process is essential for decrypting downloaded parts and restoring them to their original form.
+
+If the encryption key is lost, retrieval becomes impossible, rendering your files permanently inaccessible.
+
+Take utmost care to securely store and manage your encryption keys to ensure continued access to your encrypted files.
+
 
 # Usage
 
