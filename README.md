@@ -15,22 +15,22 @@ during the split and combine operations.
 
 ## Key Features
 
--   \*\*File Splitting:\*\* Break down large files into manageable parts
+-   **File Splitting:** Break down large files into manageable parts
     for sharing on Discord.
 
--   \*\*Encryption:\*\* Ensure the security of file content by
+-   **Encryption:** Ensure the security of file content by
     encrypting each part using the Fernet encryption algorithm.
 
--   \*\*File Combining:\*\* Reassemble file parts on Discord to recreate
+-   **File Combining:** Reassemble file parts on Discord to recreate
     the original file.
 
--   \*\*Deletion of File Parts:\*\* Manage server storage by providing
+-   **Deletion of File Parts:** Manage server storage by providing
     the ability to delete previously uploaded file parts.
 
--   \*\*List Uploaded Files:\*\* Get a list of all uploaded files in the
+-   **List Uploaded Files:** Get a list of all uploaded files in the
     Discord channel.
 
--   \*\*File Details:\*\* Get details of a specific uploaded file.
+-   **File Details:** Get details of a specific uploaded file.
 
 ## How it Works
 
@@ -118,7 +118,7 @@ Before using the bot, ensure that you have the following prerequisites:
 4.  Run `genkey.py` to generate the encryption key `enckey.key` if you
     need a new key.
 
-5.  ⚠️ **Warning: Encryption Key Protection**
+   ⚠️ **Warning: Encryption Key Protection**
 
 Never, under any circumstances, misplace or lose the encryption key associated with your files. The encryption key used during the upload process is essential for decrypting downloaded parts and restoring them to their original form.
 
@@ -184,4 +184,4 @@ Replace `<file_name>` with the name of the file you want details for.
 
 
 
-#### Before using this Discord bot, it is important to familiarize yourself with Discord's privacy policy. This application interacts with Discord servers and processes file-related operations. Ensure that you comply with Discord's terms of service and privacy policy to protect user data and adhere to the platform's guidelines.
+####  ⚠️ Before using this Discord bot, it is important to familiarize yourself with Discord's privacy policy. This application interacts with Discord servers and processes file-related operations. Ensure that you comply with Discord's terms of service and privacy policy to protect user data and adhere to the platform's guidelines.
