@@ -126,6 +126,7 @@ If the encryption key is lost, retrieval becomes impossible, rendering your file
 
 Take utmost care to securely store and manage your encryption keys to ensure continued access to your encrypted files.
 
+5.  **Finally run `discloud.py` to start the server.**
 
 # Usage
 
